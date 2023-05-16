@@ -15,8 +15,15 @@ class Program
         {
             int vi = Convert.ToInt32(Console.ReadLine());
             //TODO: Verificar se o numero lido (Vi) é diferente do último numero lido para marcá-lo.
-            ultimoNumeroLido = vi;
+            if (vi != ultimoNumeroLido)
+              {
+                Console.WriteLine($"Ultimo N°: {ultimoNumeroLido}");
+                quantidadeNumerosMarcados++;
+                Console.WriteLine($"Soma Atual: {quantidadeNumerosMarcados}");
+                ultimoNumeroLido = vi;
+            }
         }
         //TODO: Imprimir a quantidade de números marcados.
+        Console.WriteLine(quantidadeNumerosMarcados);
     }
 }
